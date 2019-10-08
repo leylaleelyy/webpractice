@@ -158,8 +158,22 @@
           var pointIndex=this.getAttribute('data-index');//获取当前标签属性
           index=pointIndex;
           goIndex();
+          time=0;//重置time
         })
       }
+
+      //2000ms跳转一次
+
+      var time = 0;
+
+      setInterval(function () {
+        time++;
+        if(time==20){
+          goNext();
+          time=0;
+        }
+      },100)
+
     </script>
 </body>
 </html>
