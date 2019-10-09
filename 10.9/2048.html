@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048</title>
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            font-size: 30px;
+            background-color: rgb(23,44,60);
+            overflow: hidden;
+        }
+        .readme{
+            position: absolute;
+            left: 10%;
+            top: 100px;
+            width: 250px;
+        }
+        .readme span{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            color: red;
+        }
+        .readme p{
+            display: block;
+            font-size: 16px;
+            text-indent: 20px;
+            color: #75ffe7;
+        }
+        .tab{
+            margin: 50px auto 0;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: bold;
+            background-color: #999;
+        }
+        tr{
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        }
+        td{
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+        }
+        .text{
+            position: absolute;
+            right: 15%;
+            top: 100px;
+            color: red;
+        }
+        .restart{
+            font-size: 22px;
+            margin: 25px;
+            color: red;
+            text-align: center;
+            cursor: pointer;
+        }
+        .score{
+            color: #75ffe7;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div class="readme">
+        <span>Play</span>
+        <p>play 2048</p>
+    </div>
+    <table class="tab" cellspacing="6"></table>
+    <div class="restart">Restart</div>
+    <div class="text" style="font-size: 16px">scores:
+        <span class="score"></span>!
+    </div>
+    <script>
+        //模块化开发
+        var json={
+            //创建一个初始化函数
+          init:function () {
+            var oTab=document.querySelector('.tab'),
+                str='',
+                id=1;//获取表格，以及保存的字符串
+            for (var i=0;i<4;i++){
+              str+="<tr>";
+              for(var j=0;j<4;j++){
+                str+='<td id="'+(id++)+'"></td>';//迭代生成表格
+              }
+              str+='</tr>';
+            }
+            oTab.innerHTML=str;
+            this.result();
+            this.randomNum();
+          },
+          //创建一个任意区间的随机函数
+          myRandom:function(min,max){
+            return Math.round(Math.random()*(max-min)+min);
+          },
+          //随机在格子里生成一个数字
+          randomNum:function(){
+            var num=this.myRandom(1,16),
+                oGrid=document.getElementById(num);
+            if(oGrid.innerHTML==''){
+              oGrid.innerHTML=this.myRandom(1,2)*2;
+            }
+          },
+          //改变颜色计算结果的函数
+          result:function () {
+            var color={'':'#fff',
+                      '2':'#0f0'};
+            for (var i=1;i<=16;i++){
+              var oGrid=document.getElementById(i);
+              oGrid.style.backgroundColor=color[oGrid.innerHTML];//把相应的颜色匹配相应的字符
+            }
+          }
+        };
+        window.onload=json.init();//加载完成调用init初始化
+    </script>
+</body>
+</html>

@@ -25,6 +25,7 @@
             color: white;
             font-size: 50px;
             transition: all .5s;
+            display: none;
         }
 
         .item:nth-child(1) {
@@ -64,7 +65,7 @@
         }
 
         .item.active {
-            z-index: 10;
+            display: block;
             opacity: 1;
         }
         .point-list{
@@ -149,9 +150,11 @@
       };
       goNextBtn.addEventListener('click',function () {//设置监听事件，调用匿名函数
         goNext();
+        time=0;//重置time
       });
       goPreBtn.addEventListener('click',function () {//设置监听事件，调用匿名函数
         goPre();
+        time=0;//重置time
       });
       for (var i=0;i<points.length;i++){
         points[i].addEventListener('click',function () {
@@ -173,7 +176,6 @@
           time=0;
         }
       },100)
-
     </script>
 </body>
 </html>
