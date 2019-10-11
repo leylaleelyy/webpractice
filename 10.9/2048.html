@@ -5,8 +5,8 @@
     <title>2048</title>
     <style type="text/css">
         *{
-            padding: 0px;
-            margin: 0px;
+            padding: 0;
+            margin: 0;
         }
         body{
             font-size: 30px;
@@ -119,6 +119,7 @@
             for (var i=1;i<=4;i++){//遍历四排
               for (var j=i;j<=i+12;j++){//j=i+3*4 同列
                 for (var k=j;k>4;k-=4){//1~4处于顶层，k>4
+                  console.log(k);
                   a.push(this.change(document.getElementById(k-4),document.getElementById(k)));
                 }
               }
@@ -232,6 +233,7 @@
           }
 
         }
+        json.top();json.result();
     </script>
 </body>
 </html>
