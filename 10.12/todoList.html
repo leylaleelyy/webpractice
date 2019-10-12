@@ -2,44 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>TodoList</title>
     <style>
         body {
             margin: 0px;
             padding: 0px;
             font-size: 16px;
-            background-color: gainsboro;
         }
+        #nav ul{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        nav li{
+            display: inline;
+            width: 18%;
+            text-decoration: none;
+            padding: 15px;
+            text-align: center;
+        }
+        li:hover{
+            background-color: lightblue;
+        }
+
         header {
-            height: 50px;
-            background-color: cornflowerblue;
+            height: 100px;
+            background-color: #b83f45;
         }
         header section {
             margin: 0 auto;
-            width: 40%;
+            width: 60%;
         }
-
         header section label {
             float: left;
-            line-height: 50px; /*设置line-height和包含块高度一致，以实现行内元素垂直居中*/
-            font-size: 20px;
+            line-height: 100px; /*设置line-height和包含块高度一致，以实现行内元素垂直居中*/
+            font-size: 64px;
         }
-
         #add_list {
             float: right;
             margin-top: 11px;
             width: 60%;
-            height: 24px;
+            height: 64px;
             border-radius: 5px;
             box-shadow: 0 1px 0 black;
-            font-size: 18px;
+            font-size: 32px;
             text-indent: 10px;
+            color: #333333;
         }
-
         h1 {
             position: relative;
         }
-
         h1 span {
             position: absolute;
             top: 1px;
@@ -53,30 +66,28 @@
             text-align: center;
             background: #E6E6FA;
         }
-
         .content {
-            width: 40%;
+            width: 60%;
             margin: 0 auto;
         }
-
         li {
             position: relative;
             margin-bottom: 10px;
             border-radius: 5px;
             padding: 0 10px;
-            height: 32px;
+            height: 50px;
             box-shadow: 0 1px 0 black;
-            line-height: 32px;
-            background-color: burlywood;
+            line-height: 50px;
+            background-color: #6ca1ff;
             list-style: none;
+            font-size: 32px;
         }
-
         ol li input {
             position: absolute;
-            top: 4px;
-            left: 10px;
-            width: 20px;
-            height: 20px;
+            top:2px;
+            left: 8px;
+            width: 40px;
+            height: 40px;
             cursor: pointer;
         }
         p{
@@ -84,18 +95,8 @@
         }
         ol li p {
             display: inline;
-            margin-left: 35px;
+            margin-left: 50px;
         }
-
-        ol li p input{
-            top: 5px;
-            margin-left: 35px;
-            width: 70%;
-            height: 14px;
-            font-size: 14px;
-            line-height: 14px;
-        }
-
         ol li a {
             text-align: center;
             position: absolute;
@@ -103,37 +104,40 @@
             right: 10px;
             display: none;
             border: 1px;
-            border-radius: 50%;
-            width: 16px;
-            height: 16px;
-            font-size: 32px;
-            line-height: 10px;
-            color: red;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            font-size: 50px;
+            line-height: 30px;
+            color: #ff0045;
             font-weight: bolder;
             cursor: pointer;
-            background-color: gray;
+            background-color: #dadada;
         }
         ol li:hover a{
             display: inline-block;
         }
-        #donelist li p{
+        .done_list li p{
             text-decoration: line-through;
         }
         #clear {
             width: 100px;
             margin: 0 auto;
         }
-
-        #clearbutton {
-            border-color: red;
+        #clear_button {
+            border-color: #ff0045;
             border-radius: 5px;
-            box-shadow: 0 1px 0 yellow;
+            box-shadow: 0 1px 0 #f4ff89;
             cursor: pointer;
         }
-
-        button h3{
-            font-size: 13px;
-            line-height: 13px;
+        button {
+            width: 200px;
+            height: 45px;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 40px;
+            background-color: #f44336;
+            color: white;
         }
     </style>
 </head>
@@ -145,20 +149,45 @@
     </section>
 </header>
 <div class="content">
-    <h1>未完成
-        <span id="todoCount"></span>
-    </h1>
-    <ol id="todolist">
-    </ol>
+    <div id="container">
+        <section class="tab">
+            <h1>未完成
+                <span class="todoCount"></span>
+            </h1>
+            <ol class="todo_list">
+            </ol>
+            <h1>已完成
+                <span class="doneCount"></span>
+            </h1>
+            <ol class="done_list">
+            </ol>
+        </section>
+        <section class="tab">
+            <h1>未完成
+                <span class="todoCount"></span>
+            </h1>
+            <ol class="todo_list">
+            </ol>
+        </section>
+        <section class="tab">
+            <h1>已完成
+                <span class="doneCount"></span>
+            </h1>
+            <ol class="done_list">
+            </ol>
+        </section>
 
-    <h1>已完成
-        <span id="doneCount"></span>
-    </h1>
-    <ol id="donelist">
-    </ol>
+    </div>
 </div>
+<nav id="nav">
+    <ul>
+        <li class="act">全部</li>
+        <li>进行</li>
+        <li>完成</li>
+    </ul>
+</nav>
 <div id="clear">
-    <span style="white-space:pre;">  </span><button id="clearbutton"><h3>全部清除</h3></button>
+    <button id="clear_button">全部清除</button>
 </div>
 <script>
   function addTodoList(e) {
@@ -180,10 +209,10 @@
   }
 
   function load() {
-    var todo=document.getElementById('todolist'),
-      done=document.getElementById('donelist'),
-      todocount=document.getElementById('todoCount'),
-      donecount=document.getElementById('doneCount'),
+    var todo=document.getElementsByClassName('todo_list'),
+      done=document.getElementsByClassName('done_list'),
+      todocount=document.getElementsByClassName('todoCount'),
+      donecount=document.getElementsByClassName('doneCount'),
       todoString='',
       doneString='',
       todoCount=0,
@@ -196,75 +225,56 @@
         if (!todolist[i].done){
           todoString+="<li>"+"<input type='checkbox' onchange='update("+i+",\"done\",true)'>"
             +"<p id='p-"+i+"' onclick='edit("+i+")'>"+todolist[i].todo+"</p>"+
-            "<a onclick='remove("+i+")'>-</a>"+"</li>";//将每次输入的数据，通过节点<P>用id标记，以便后续编辑功能定位
+            "<a onclick='remove("+i+")'>x</a>"+"</li>";//将每次输入的数据，通过节点<P>用id标记，以便后续编辑功能定位
           todoCount++;
         }else{
           doneString+="<li>"+"<input type='checkbox' onchange='update("+i+",\"done\",false)' checked>"
             +"<p id='p-'"+i+"' onclick='edit("+i+")'>"+todolist[i].todo+"</p>"+
-                  "<a onclick='remove("+i+")'>-</a>"+"</li>";
+                  "<a onclick='remove("+i+")'>x</a>"+"</li>";
           doneCount++;
         }
       }
-      todo.innerHTML=todoString;
-      done.innerHTML=doneString;
-      todocount.innerHTML=todoCount;
-      donecount.innerHTML=doneCount;
-    }else {
-      todo.innerHTML='';
-      done.innerHTML='';
-      todocount.innerHTML='0';
-      donecount.innerHTML='0';
-    }
-  }
-  function edit(i) {
-    var p = document.getElementById('p-' + i),
-      pContent = p.innerHTML,
-      inputId;
-//通过update函数对todolist数组相应项进行更新，将用户输入的内容写入到todolist数组相应项的todo属性中
-    function confirm() {
-      if (inputId.value.length === 0) {
-        p.innerHTML = pContent;
-        alert("内容不能为空");
+      for (var i=0;i<todo.length;i++){
+        todo[i].innerHTML=todoString;
+        done[i].innerHTML=doneString;
       }
-      else {
-        update(i, "todo", inputId.value); //修改事项内容后，更新数组里对应项"todo"属性的值，以便更新dom节点
+      for (var i=0;i<todocount.length;i++){
+        todocount[i].innerHTML=todoCount;
+        donecount[i].innerHTML=doneCount;
       }
-    }
 
-//结合keypress事件，按下enter键，调用confirm函数
-    function enter(e) {
-      if (e.key == 'Enter'){
-        confirm();
+    }else {
+      for (var i=0;i<todo.length;i++){
+        todo[i].innerHTML='';
+        done[i].innerHTML='';
+      }
+      for (var i=0;i<todocount.length;i++){
+        todocount[i].innerHTML=0;
+        donecount[i].innerHTML=0;
       }
     }
-    p.innerHTML = "<input type='text' id='input-"+i+"' value='"+pContent+"'>";
-    inputId = document.getElementById('input-'+i);
-    inputId.focus();
-    inputId.setSelectionRange(0, inputId.value.length);
-    inputId.onblur = confirm; //表单控件失去焦点，调用confirm函数，即对页面内容进行更新
-    inputId.onkeypress = enter;  //对按键事件进行监控
   }
-  /*将数组todolist对应项的属性（todo，done）进行更新并加载*/
+
   function update(i, field, value) {
     todolist[i][field] = value;
     saveData(todolist);
     load();
   }
-  //删除相应项并加载
+  //删除相应项
   function remove(i) {
     todolist.splice(i, 1);
-    saveData(todolist); //相同名称的缓存会覆盖，更新缓存
+    saveData(todolist);
     load();
   }
-  //将数据保存至本地缓存
+  //将数据保存
   function saveData(data) {
     localStorage.setItem("mytodolist", JSON.stringify(data)); //JS对象转换成JSON对象存进本地缓存
   }
-  //从本地缓存中获取数据，有数据，赋值给todolist，刷新页面后输入的数据依旧存在
+  //从本地缓存中获取数据，有数据，赋值给todolist
   function loadData() {
     var hisTory = localStorage.getItem("mytodolist");
     if(hisTory !=null){
-      return JSON.parse(hisTory);  //JSON对象转换为JS对象
+      return JSON.parse(hisTory);
     }
     else { return []; }
   }
@@ -273,11 +283,35 @@
     localStorage.clear();
     load();
   }
-  window.addEventListener("load", load); //页面加载完毕调用load函数
-  document.getElementById("clearbutton").onclick = clear;
+  window.addEventListener("load", load);
+  document.getElementById("clear_button").onclick = clear;
   document.getElementById("add_list").onkeypress = function (event) {
     if(event.key === 'Enter'){
       addTodoList();
+    }
+  };
+</script>
+<script>
+  window.onload=function () {
+    var nav=document.getElementById('nav');
+    var oNav=nav.getElementsByTagName('li');
+
+    var container=document.getElementById('container');
+    var oDiv=container.getElementsByClassName('tab');
+    for(var i=0;i<oNav.length;i++){
+      oNav[i].index=i;
+      oNav[i].onclick=function () {
+        for(var i=0;i<oNav.length;i++){
+          oNav[i].className='';
+          oDiv[i].style.display="none";
+        }
+        this.className='act';
+        oDiv[this.index].style.display="block"
+      };
+      for(var m=1;m<oNav.length;m++){
+        oNav[m].className='';
+        oDiv[m].style.display="none";
+      }
     }
   };
 </script>

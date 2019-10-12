@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="500px" viewBox="0 0 1000 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Logologo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#0B2F78" offset="0%"></stop>
+            <stop stop-color="#04488A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#0171BD" offset="0%"></stop>
+            <stop stop-color="#0D84CE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="82.5606079%" y1="44.1229197%" x2="13.1859734%" y2="60.1754165%" id="linearGradient-3">
+            <stop stop-color="#005DB3" offset="0%"></stop>
+            <stop stop-color="#064C8A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="37.2951647%" x2="0%" y2="71.2673586%" id="linearGradient-4">
+            <stop stop-color="#0065B8" offset="0%"></stop>
+            <stop stop-color="#035397" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="10.2221081%" y1="37.9634208%" x2="97.7481254%" y2="64.1641844%" id="linearGradient-5">
+            <stop stop-color="#007FC6" offset="0%"></stop>
+            <stop stop-color="#0B99EC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="96.5182557%" y2="50%" id="linearGradient-6">
+            <stop stop-color="#0494FC" offset="0%"></stop>
+            <stop stop-color="#00ABFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" id="linearGradient-7">
+            <stop stop-color="#0A86C0" offset="0%"></stop>
+            <stop stop-color="#118BED" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="58.7901215%" x2="100%" y2="41.2098785%" id="linearGradient-8">
+            <stop stop-color="#0969B3" offset="0%"></stop>
+            <stop stop-color="#0076BF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="23.1358154%" y1="21.5221239%" x2="82.8009008%" y2="76.9956666%" id="linearGradient-9">
+            <stop stop-color="#045497" offset="0%"></stop>
+            <stop stop-color="#006FC0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="42.6754762%" y1="27.1578637%" x2="49.8953348%" y2="68.5405584%" id="linearGradient-10">
+            <stop stop-color="#07579E" offset="0%"></stop>
+            <stop stop-color="#0078C5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-11">
+            <stop stop-color="#043B7C" offset="0%"></stop>
+            <stop stop-color="#094B92" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="43.8315088%" x2="38.3299574%" y2="56.1684912%" id="linearGradient-12">
+            <stop stop-color="#0B3F7C" offset="0%"></stop>
+            <stop stop-color="#044785" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-13">
+            <stop stop-color="#09579D" offset="0%"></stop>
+            <stop stop-color="#043A76" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo">
+            <g id="Group" transform="translate(-20.000000, -2.000000)">
+                <ellipse id="Oval" fill="url(#linearGradient-1)" transform="translate(220.015963, 247.437125) rotate(-43.000000) translate(-220.015963, -247.437125) " cx="220.015963" cy="247.437125" rx="65.6825397" ry="33.6933287"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-2)" transform="translate(409.243340, 262.761116) rotate(41.000000) translate(-409.243340, -262.761116) " cx="409.24334" cy="262.761116" rx="31.2600002" ry="16.2350006"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-3)" transform="translate(393.091456, 126.940763) rotate(85.000000) translate(-393.091456, -126.940763) " cx="393.091456" cy="126.940763" rx="28.2052964" ry="9.67000008"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-4)" transform="translate(368.908268, 182.968742) rotate(77.000000) translate(-368.908268, -182.968742) " cx="368.908268" cy="182.968742" rx="34.7599983" ry="22.6700001"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-5)" transform="translate(398.615051, 329.512101) rotate(12.000000) translate(-398.615051, -329.512101) " cx="398.615051" cy="329.512101" rx="46.0449982" ry="31.6299992"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-6)" transform="translate(507.804814, 333.235353) rotate(27.000000) translate(-507.804814, -333.235353) " cx="507.804814" cy="333.235353" rx="53.5449982" ry="15.6300001"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-7)" transform="translate(456.074230, 275.933753) rotate(47.000000) translate(-456.074230, -275.933753) " cx="456.07423" cy="275.933753" rx="26.0450001" ry="8.63000011"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-8)" transform="translate(412.305608, 217.761682) rotate(65.000000) translate(-412.305608, -217.761682) " cx="412.305608" cy="217.761682" rx="26.5450001" ry="11.1300001"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-9)" transform="translate(321.423144, 251.147273) rotate(-11.000000) translate(-321.423144, -251.147273) " cx="321.423144" cy="251.147273" rx="42.181254" ry="36.7743587"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-10)" transform="translate(268.303136, 353.710310) rotate(-32.000000) translate(-268.303136, -353.710310) " cx="268.303136" cy="353.71031" rx="70.8409606" ry="43.8304391"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-11)" transform="translate(316.131882, 138.502557) rotate(-49.000000) translate(-316.131882, -138.502557) " cx="316.131882" cy="138.502557" rx="51.2262144" ry="27.1951782"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-12)" transform="translate(398.523383, 50.272664) rotate(-59.000000) translate(-398.523383, -50.272664) " cx="398.523383" cy="50.2726642" rx="48.4289973" ry="17.0102207"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-13)" transform="translate(108.253176, 404.055875) rotate(-46.000000) translate(-108.253176, -404.055875) " cx="108.253176" cy="404.055875" rx="113.714996" ry="40.6763285"></ellipse>
+                <text id="Unique" stroke="#0D3C7F" stroke-width="2.5" font-family="Arial-ItalicMT, Arial" font-size="130" font-style="italic" font-weight="normal" letter-spacing="9.39999962" fill="#0D3C7F">
+                    <tspan x="504" y="221">Uniqu</tspan>
+                    <tspan x="890.663084" y="221">e</tspan>
+                </text>
+                <text id="Studio" font-family="Arial-ItalicMT, Arial" font-size="130" font-style="italic" font-weight="normal" letter-spacing="1.79999995" fill="#000000">
+                    <tspan x="640" y="365">Studi</tspan>
+                    <tspan x="945.308594" y="365">o</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
