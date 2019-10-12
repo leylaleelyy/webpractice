@@ -129,7 +129,7 @@
         <header>
             <h1>todos</h1>
             <label>
-                <input id="todo" class="new-todo" placeholder="What needs to be done?" value="" />
+                <input id="todo" class="new-todo"  placeholder="What needs to be done?" value="" />
             </label>
             <button type="submit" onclick="createTodo()">submit</button>
         </header>
@@ -151,9 +151,12 @@
       }
       console.log(todoValue);
     }
+
     function deleteTodoItem() {
-      var item=document.getElementsByClassName('todoitem');
+      let item=document.getElementsByClassName('todoitem');
+      item.parentNode.removeChild();
     }
+    document.getElementsByClassName('todoitem').onclick=deleteTodoItem();
 </script>
 </body>
 </html>
